@@ -26,14 +26,16 @@ void times_table(void)
 				_putchar((k / 10) + '0');
 				_putchar((k % 10) + '0');
 			}
-			if (j != 9)
+			if (j != 9 && k <= 9)
 			{
 				_putchar(',');
 				_putchar(' ');
-			}
-			if (k <= 9 && j != 9)
-			{
 				_putchar(' ');
+			}
+			else if (j != 9)
+			{
+				_putchar(',');
+                                _putchar(' ');
 			}
 		}
 		_putchar('\n');
