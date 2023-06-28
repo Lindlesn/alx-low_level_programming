@@ -17,17 +17,18 @@ void times_table(void)
 		{
 			int k = i * j;
 
-			if (k <= 9 && j != 9)
+			if (k <= 9)
 			{
+				_putchar(' ');
 				_putchar(k + '0');
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
 			}
-			else if (k > 9 && j != 9)
+			else
 			{
 				_putchar((k / 10) + '0');
 				_putchar((k % 10) + '0');
+			}
+			if (j != 9)
+			{
 				_putchar(',');
 				_putchar(' ');
 			}
