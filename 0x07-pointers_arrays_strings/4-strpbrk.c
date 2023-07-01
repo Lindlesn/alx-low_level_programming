@@ -6,7 +6,7 @@
  * @s: string to be searched
  * @accept: string to be searched
  *
- * Return: pointer to the byte in s that matches one of the bytes in accept, or NULL if none
+ * Return: pointer to s or null if no bytes found
  *
  */
 
