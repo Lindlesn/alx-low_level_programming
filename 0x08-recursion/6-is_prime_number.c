@@ -3,7 +3,6 @@
 int actual_prime(int n, int i);
 
 /**
- *
  * is_prime_number - checks if integer is prime or not
  *
  * @n: number to be checked
