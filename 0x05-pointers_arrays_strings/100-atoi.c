@@ -40,6 +40,7 @@ int _atoi(char *s)
 			k = 0;
 		}
 		i++;
+		len++;
 	}
 	if (k == 0 && len == 0)
 	{
