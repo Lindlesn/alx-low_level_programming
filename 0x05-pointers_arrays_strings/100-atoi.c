@@ -41,7 +41,7 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	if (k == 0)
+	if (k == 0 && len == 0)
 	{
 		return (0);
 	}
