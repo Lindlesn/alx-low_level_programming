@@ -18,7 +18,7 @@ char *str_concat(char *s1, char *s2)
 	unsigned int size1 = (s1 != NULL) ? strlen(s1) : 0;
 	unsigned int size2 = (s2 != NULL) ? strlen(s2) : 0;
 	char *ptr, *ret;
-	
+
 	ret = malloc(size1 + size2 + 1);
 	if (!ret)
 	{
