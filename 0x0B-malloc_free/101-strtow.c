@@ -41,48 +41,61 @@ int count_words(char *s)
 
 char **strtow(char *str)
 {
-	char **mat, *tmp;
 
-	int i, j = 0, len = 0, wc, k = 0, start;
+	int i, j = 0, k, wl, start;
+	int len = strlen(str);
+	int wc = count_words(str);
+	char **words = malloc((wc + 1) * sizeof(char *));
 
-	len = strlen(str);
-
-	wc = count_words(str);
 	if (wc == 0)
 	{
 		return (NULL);
 	}
-
-	mat = (char **)malloc(sizeof(char *) * (wc + 1));
-	if (mat == NULL)
+	if (words == NULL)
+	{
+		return (NULL);
+	}
+	if (str == 0 || *str == '\0')
 	{
 		return (NULL);
 	}
 
-	for (i = 0; i <= len; i++)
+	while (i < len)
 	{
-		if (str[i] == ' ' || str[i] == '\0')
+		while (i < len && str[i] == ' ')
 		{
-			if (k)
-			{
-				tmp = (char *)malloc(sizeof(char) * (k + 1));
-				if (tmp == NULL)
-				{
-					return (NULL);
-				}
-				memcpy(tmp, &str[start], k);
-				tmp[k] = '\0';
-				mat[j] = tmp;
-				j++;
-
-				k = 0;
-			}
+			i++;
 		}
-		else if (k++ == 0)
+		if ( i < len && str[i] != ' ')
 		{
 			start = i;
+
+			wl = 0;
+
+			while (i < len && str[i] != ' ')
+			{
+				i++;
+				wl++;
+			}
+			words[j] = malloc((wl + 1) * sizeof(char));
+
+			if (words[j] == NULL)
+			{
+				for (k = 0; k < j; k++)
+				{
+					free(words[k]);
+				}
+				free(words);
+
+				return (NULL);
+			}
+
+			strncpy(words[j], str + start, wl);
+			words[j][wl] = '\0';
+
+			j++;
 		}
 	}
-	mat[j] = NULL;
-	return (mat);
+	words[j] = NULL;
+	return (words);
 }
