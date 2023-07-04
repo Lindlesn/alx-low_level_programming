@@ -20,10 +20,11 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	for (i =0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		strc = (char *)malloc(sizeof(char) * (i + 1));
+		;
 	}
+	strc = (char *)malloc(sizeof(char) * (i + 1));
 	if (strc == NULL)
 	{
 		return (NULL);
