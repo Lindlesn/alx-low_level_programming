@@ -66,8 +66,8 @@ int op_div(int a, int b)
 	return (a / b);
 }
 
-/**   
- * op_mul - Returns the remainder of the quotient of two numbers
+/**
+ * op_mod - Returns the remainder of the quotient of two numbers
  *
  * @a: The first number
  * @b: The second number
@@ -78,5 +78,5 @@ int op_div(int a, int b)
 
 int op_mod(int a, int b)
 {
-        return (a % b);
+	return (a % b);
 }
