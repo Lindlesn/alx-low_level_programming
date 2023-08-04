@@ -30,7 +30,7 @@ int check_num(char *str)
 
 /**
  * main - adds positive numbers
- * 
+ *
  * @argc: number of arguments
  * @argv: array of arguments
  *
