@@ -42,7 +42,7 @@ void print_all(const char * const format, ...)
 						str = "(nil)";
 					}
 					printf("%s%s", separator, str);
-				break;
+					break;
 				}
 		}
 		separator = ", ";
